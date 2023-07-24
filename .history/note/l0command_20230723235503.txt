@@ -1,0 +1,8 @@
+=>Command 
+
+php artisan 
+
+=>server run 
+php artisan serve 
+
+=>Check route list 

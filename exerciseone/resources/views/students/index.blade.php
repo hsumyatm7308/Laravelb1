@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Student Page </title>
+</head>   
+<body>
+    <h1>Welcome to Our Index Site </h1>
+
+    <li><a href="">Index  {{$fs}}</a></li>
+    <li><a href="{{route('stdshow')}}">Show </a></li>
+    <li><a href="">Edit </a></li>
+</body> 
+</html>

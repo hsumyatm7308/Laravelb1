@@ -1,0 +1,5 @@
+=>Controller 
+php artisan make::controller studentsController 
+
+
+Route::get("students",[App\Http\Controllers\studentsController::class,'classobject'])->name('students.index')

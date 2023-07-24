@@ -1,0 +1,4 @@
+=>MVC Freamework (Model,View,Controller)
+
+Model 
+it's work with database (Select,Insert,Update,Delete)

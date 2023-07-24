@@ -1,0 +1,72 @@
+=>Routing 
+
+routes > web.php (or) routes > api.php 
+
+=>Avaliable Router Methods 
+Route::get(uri,callback);
+Route::get(uri,callback);
+Route::post(uri,callback);
+Route::put(uri,callback);
+Route::patch(uri,callback);
+Route::delete(uri,callback);
+Route::option(uri,callback);
+
+
+:: = sro   (call class methods)
+
+
+=>Basic routing 
+
+Route::get("/",function(){
+    return "Save Myanmer";
+})
+
+
+Route::get('/sayar',function(){
+    return 'Hey,Sayar Nay Kaung Lr??';
+})
+
+
+** Route must unique => one page one route 
+
+
+=>Redirect routing 
+syntax 
+Route::get(uri,function(){
+    return redirect(routename);
+})
+
+
+Route::get('contact',function(){
+    return redirect('about');
+})
+
+
+----------------------------
+
+
+=>Route with Parameter 
+
+(i)Single Paramerter 
+
+Route::get('about/company/{staff}',function($staff){
+    return view('aboutcompnaystaff',['sf'=>$staff]);
+})
+
+
+
+
+(ii)Multi Parameter 
+
+Route::get('about/company/{staff}/{city}',function($staff,$city){
+    return view('aboutcompnaystaffbycity',['sf'=>$staff,'ct'=>$city]);
+   
+});
+
+
+
+Route::get('profile',function(){
+    return view('profileme');
+})-name('profiles');
+
+

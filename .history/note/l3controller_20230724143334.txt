@@ -1,0 +1,19 @@
+=>Controller 
+php artisan make::controller studentsController 
+
+
+Route::get("students",[App\Http\Controllers\studentsController::class,'index'])->name('students.index');
+
+
+ =>Group 
+
+    *Note ::  prefix refers to a part of URL that is common to multi routes.
+Route::group(['prefix=>students'],function(){
+    Route::get('students',[App\Http\Controllers\studentsController::class,'index'])->name('studentidx');
+    Route::get('students/show',[App\Http\Controllers\studentsController::class,'show'])->name('stdshow');
+    Route::get('students/edit',[App\Http\Controllers\studentsController::class,'edit'])->name('editpage');
+    
+});
+
+
+php artisan make:controller staffsController

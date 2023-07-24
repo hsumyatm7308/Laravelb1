@@ -1,0 +1,8 @@
+=>MVC Freamework (Model,View,Controller)
+
+Model 
+it's work with database (Select,Insert,Update,Delete)
+
+View 
+A view is that part of the application that represents the presentation of data
+.html/css/boostrap/etc.... 

@@ -1,0 +1,2 @@
+=>Controller 
+php artisan make::controller studentsController 

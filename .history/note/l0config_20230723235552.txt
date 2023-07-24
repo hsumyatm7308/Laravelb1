@@ -1,0 +1,5 @@
+=>Custom Config 
+APP_Name = "Your Project Name" 
+
+=>Local (Devlopment)
+APP_DEBUT = true 
