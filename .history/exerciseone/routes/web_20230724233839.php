@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\dashboardController;
-use App\Http\Controllers\membersController;
+use App\Http\Controllers\membersController
 use App\Http\Controllers\employeesController;
 use App\Http\Controllers\staffsController;
 use App\Http\Controllers\studentsController;
