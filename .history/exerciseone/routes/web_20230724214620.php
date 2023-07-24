@@ -118,10 +118,4 @@ Route::get('employees', [employeesController::class, 'index'])->name('employeesd
 Route::get('employees/show', [employeesController::class, 'index'])->name('showindex');
 Route::get('employees/show', [employeesController::class, 'show'])->name('show');
 Route::get('employees/passingdataone', [employeesController::class, 'passingdataone'])->name('dataone');
-Route::get('employees/passingdatatwo', [employeesController::class, 'passingdatatwo'])->name('datatwo');
-Route::get('employees/passingdatathree', [employeesController::class, 'passingdatathree'])->name('datathree');
-Route::get('employees/passingdatafour', [employeesController::class, 'passingdatafour'])->name('datafour');
-Route::get('/employees/edit', [employeesController::class, 'edit'])->name('employees.edit');
-Route::get('/employees/update', [employeesController::class, 'update'])->name('employees.update');
-
-
+Route::get('employees/passingdatatwo', [employeesController::class, 'passingdatatwo'])->name('dataone');

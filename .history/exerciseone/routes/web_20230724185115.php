@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\employeesController;
 use App\Http\Controllers\staffsController;
 use App\Http\Controllers\studentsController;
 
@@ -113,15 +112,5 @@ Route::get('staffs/home', [staffsController::class, 'homemethod'])->name('home')
 Route::get('staffsparty', [staffsController::class, 'party'])->name('party');
 Route::get('staffsparty/total', [staffsController::class, 'total'])->name('total');
 Route::get('staffsparty/comfirm', [staffsController::class, 'totalcomfirm'])->name('comfirm');
-
-Route::get('employees', [employeesController::class, 'index'])->name('employeesdata');
-Route::get('employees/show', [employeesController::class, 'index'])->name('showindex');
-Route::get('employees/show', [employeesController::class, 'show'])->name('show');
-Route::get('employees/passingdataone', [employeesController::class, 'passingdataone'])->name('dataone');
-Route::get('employees/passingdatatwo', [employeesController::class, 'passingdatatwo'])->name('datatwo');
-Route::get('employees/passingdatathree', [employeesController::class, 'passingdatathree'])->name('datathree');
-Route::get('employees/passingdatafour', [employeesController::class, 'passingdatafour'])->name('datafour');
-Route::get('/employees/edit', [employeesController::class, 'edit'])->name('employees.edit');
-Route::get('/employees/update', [employeesController::class, 'update'])->name('employees.update');
 
 

@@ -121,7 +121,4 @@ Route::get('employees/passingdataone', [employeesController::class, 'passingdata
 Route::get('employees/passingdatatwo', [employeesController::class, 'passingdatatwo'])->name('datatwo');
 Route::get('employees/passingdatathree', [employeesController::class, 'passingdatathree'])->name('datathree');
 Route::get('employees/passingdatafour', [employeesController::class, 'passingdatafour'])->name('datafour');
-Route::get('/employees/edit', [employeesController::class, 'edit'])->name('employees.edit');
-Route::get('/employees/update', [employeesController::class, 'update'])->name('employees.update');
-
 
