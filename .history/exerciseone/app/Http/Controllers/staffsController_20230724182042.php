@@ -18,15 +18,13 @@ class staffsController extends Controller
 
     public function total()
     {
-
-        $total = 10000;
         
-       return view('staffs/partytotal',['total'=>$total]);
+       return view('staffs/partytotal');
     }
 
     public function totalcomfirm(){
         $total = 30000;
         $status = "checked";
-        return view('staffs/partytotalcomfirm' , ['total'=>$total,'status'=>$status]);
+        return view('staffs/partytotalcomfirm');
     }
 }

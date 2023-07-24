@@ -16,10 +16,8 @@ class staffsController extends Controller
         return view('staffs/party');
     }
 
-    public function total()
+    public function total($total)
     {
-
-        $total = 10000;
         
        return view('staffs/partytotal',['total'=>$total]);
     }

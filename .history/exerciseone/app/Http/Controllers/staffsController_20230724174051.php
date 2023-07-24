@@ -16,17 +16,10 @@ class staffsController extends Controller
         return view('staffs/party');
     }
 
-    public function total()
+    public function total($total)
     {
-
-        $total = 10000;
-        
        return view('staffs/partytotal',['total'=>$total]);
     }
 
-    public function totalcomfirm(){
-        $total = 30000;
-        $status = "checked";
-        return view('staffs/partytotalcomfirm' , ['total'=>$total,'status'=>$status]);
-    }
+    
 }

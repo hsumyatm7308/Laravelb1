@@ -7,9 +7,9 @@
     <h1>Welcome to Our Home Site </h1>
 
     <li><a href="{{URL::to('home')}}">Home</a></li>
-    <li><a href="{{route('party')}}">Party </a></li>
-    <li><a href="{{route('total')}}">Party Total</a></li>
-    <li><a href="{{route('comfirm')}}">Party Total</a></li>
+    <li><a href="{{route('staffs.party')}}">Party </a></li>
+    <li><a href="{{route('staffs.total')}}">Party Total</a></li>
+    <li><a href="{{route('staffs.comfirm')}}">Party Total</a></li>
 
 </body> 
 </html>

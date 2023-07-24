@@ -4,7 +4,9 @@
       <title>Staffs Page  </title>
 </head>   
 <body>
-    <h1>Welcome to Our Home Site </h1>
+    <h1>Welcome to Our Toal Comfirm  Site </h1>
+    <p>Total price is {{$total}} and total comfirm is {{$status}} </p>
+
 
     <li><a href="{{URL::to('home')}}">Home</a></li>
     <li><a href="{{route('party')}}">Party </a></li>

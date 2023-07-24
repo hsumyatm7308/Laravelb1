@@ -4,7 +4,8 @@
       <title>Staffs Page  </title>
 </head>   
 <body>
-    <h1>Welcome to Our Home Site </h1>
+    <h1>Welcome to Our Party Total Site </h1>
+    <p>Total price is {{$total}}</p>
 
     <li><a href="{{URL::to('home')}}">Home</a></li>
     <li><a href="{{route('party')}}">Party </a></li>

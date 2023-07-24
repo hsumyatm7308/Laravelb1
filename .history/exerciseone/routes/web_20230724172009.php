@@ -107,8 +107,4 @@ Route::group(['prefix' => 'students'], function () {
 
 
 
-Route::get('staffs/home', [staffsController::class, 'homemethod'])->name('home');
-
-Route::get('staffsparty', [staffsController::class, 'party'])->name('party');
-Route::get('staffsparty/total', [staffsController::class, 'total'])->name('total');
-Route::get('staffsparty/comfirm', [staffsController::class, 'totalcomfirm'])->name('comfirm');
+Route::get('staffs/home', [staffsController::class, 'homemethod'])->name('staffs.home');
