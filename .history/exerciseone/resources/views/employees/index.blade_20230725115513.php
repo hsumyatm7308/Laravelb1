@@ -42,7 +42,7 @@
 
 @foreach($commondata as $common)
 
-  <li> {!!$common!!} </li>
+  <li> {!!$empdata!!} </li>
 
   @endforeach  
 

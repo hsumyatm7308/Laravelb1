@@ -1,0 +1,28 @@
+=>Migration 
+
+.env 
+
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laraveldatabaseone
+DB_USERNAME=root
+DB_PASSWORD=
+
+
+mysql -u root -p 
+database@passowrd 
+
+status 
+
+CREATE DATABASE laraveldatabaseone
+
+SHOW DATABASE; 
+
+database > migration 
+=>new table to update db server 
+   php artisan migrate 
+
+
+   

@@ -40,9 +40,9 @@
 
 <br>
 
-@foreach($commondata as $common)
+@foreach($employeesdata as $empdata)
 
-  <li> {!!$common!!} </li>
+  <li> {!!$empdata!!} </li>
 
   @endforeach  
 

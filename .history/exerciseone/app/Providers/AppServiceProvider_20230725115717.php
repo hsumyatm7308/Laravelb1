@@ -55,7 +55,6 @@ class AppServiceProvider extends ServiceProvider
 
 
 
-        // use Illuminate\Support\Facades\View;   //Static method
         View::share('demo','Do you want our demo version.');
 
 

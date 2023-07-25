@@ -1,0 +1,51 @@
+=>Migration 
+
+.env 
+
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laraveldatabaseone
+DB_USERNAME=root
+DB_PASSWORD=
+
+
+mysql -u root -p 
+database@passowrd 
+
+status 
+
+CREATE DATABASE laraveldatabaseone
+
+SHOW DATABASE; 
+
+database > migration 
+=>new table to update db server 
+   php artisan migrate 
+
+
+=>Create New Table 
+php artisan make:migration create_tablename_table    //generally name 
+php artisan make:migration creat_tablename_table --create= "tablename"  // give that speciall taht name 
+
+=>Migrate Table 
+php artisan migrate 
+
+=>Avaliable Column Types 
+id()
+increments('id') -> primary key auto incremented value 
+bigIncrements('id') -> same as increments but for big int values
+bitInteger('id') -> stores a bit integer with the specified length (up to 8)
+unsignedBigInteger('id') 
+unsignedInteger('id')
+tinyInteger('id')  //3 or 4 lone
+smallInteger('votes') //3 or 4 lone
+
+binary('photo') 
+boolean('confirmed') 
+char('name',50)-> string of fixed size up tp n characters long, if data is 
+string('email')
+
+
+

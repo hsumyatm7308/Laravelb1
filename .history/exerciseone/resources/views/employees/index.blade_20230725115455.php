@@ -40,13 +40,8 @@
 
 <br>
 
-@foreach($commondata as $common)
 
-  <li> {!!$common!!} </li>
-
-  @endforeach  
-
-
+{{commondata}}
 
 </body>
 </html>

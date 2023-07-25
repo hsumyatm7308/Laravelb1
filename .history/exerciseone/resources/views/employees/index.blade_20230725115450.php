@@ -40,12 +40,6 @@
 
 <br>
 
-@foreach($commondata as $common)
-
-  <li> {!!$common!!} </li>
-
-  @endforeach  
-
 
 
 </body>

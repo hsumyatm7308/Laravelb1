@@ -47,16 +47,15 @@ class AppServiceProvider extends ServiceProvider
 
         //  =>Multi 
 
+       
+
         View::composer(['employees.index','layouts,index'] ,function ($view) {
             $commonData = ['siteName' => 'My Website', 'logo' => 'logo.png'];
             // view()->share($commonData);
-            $view->with('commondata',$commonData);
+            
         });
 
 
-
-        // use Illuminate\Support\Facades\View;   //Static method
-        View::share('demo','Do you want our demo version.');
 
 
 
