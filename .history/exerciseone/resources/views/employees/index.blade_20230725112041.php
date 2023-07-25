@@ -33,9 +33,7 @@
   @endforeach  
 -->
 
-<br>
-
-{{$siteName}}
+{{$$getdate}}
 
 
 </body>

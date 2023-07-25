@@ -49,7 +49,7 @@ class AppServiceProvider extends ServiceProvider
 
        
 
-        View::composer(['employees.index','layouts,index'] ,function ($view) {
+        View::composer(['employees.index','layouts,index'] function ($view) {
             $commonData = ['siteName' => 'My Website', 'logo' => 'logo.png'];
             view()->share($commonData);
         });

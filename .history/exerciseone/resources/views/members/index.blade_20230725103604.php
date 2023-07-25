@@ -27,7 +27,7 @@ Thanks for using our platform {{$hay}}
 @endsection
 
 
-{{$getdate}}
+
 
 
 
