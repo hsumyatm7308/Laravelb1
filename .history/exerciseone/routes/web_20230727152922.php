@@ -197,12 +197,7 @@ Route::get('books/read',function(){
     // $results = DB::table('books')->selectRaw('count(*) AS titlename,title')->where('id',"<>",3)->groupBy('title')->get();  //It's okay because selectRaw knows expression 
     // $results = DB::table('books')->select('count(*) AS titlename,title')->where('id',"<>",3)->groupBy('title')->get(); // select doesn't know expression. It assumes a column 
 
-    // $results = DB::table('books')->select(DB::raw('count(*) AS titlename,title'))->where('id',"<>",3)->groupBy('title')->get(); // select doesn't know expression. It assumes a column. So to know expression, It is used DB:raw()
-
-    // $results = DB::table('books')->first();
-    // $results = DB::table('books')->pluck('title');
-    $results = DB::table('books')->pluck('title','id'); // one parameter's output is by array . Two parameter is by object. => {'value':'key'}
-
+    $results = DB::table('books')->select(DB::raw('count(*) AS titlename,title'))->where('id',"<>",3)->groupBy('title')->get(); // select doesn't know expression. It assumes a column. So to know expression, It is used DB:raw()
 
 
 

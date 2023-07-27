@@ -6,7 +6,7 @@ use App\Http\Controllers\membersController;
 use App\Http\Controllers\employeesController;
 use App\Http\Controllers\staffsController;
 use App\Http\Controllers\studentsController;
-use Illuminate\Support\Facades\DB;
+use App\Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -135,78 +135,5 @@ Route::get('/members', [membersController::class, 'index'])->name('members.index
 // Data Insert from route 
 // use Illuminate\Support\Facades\DB 
 Route::get('types/insert',function(){
-  DB::insert("INSERT INTO types(name) VALUES(?)",["book"]);
-  return "Successfully Insert";
-});
-
-Route::get('books/insert',function(){
-   DB::insert("INSERT INTO books(title) VALUES(?)",["This is title 1"]);
-   return "Successfully Insert";
-});
-
-
-Route::get('books/update',function(){
-    DB::insert("UPDATE books SET description='Lorem Ipsum is simply dummy text of the printing and typesetting industry.' WHERE id=?",['1']);
-    return "Successfully update";
- });
-
-
- Route::get('books/insert',function(){
-    DB::insert("INSERT INTO books(title,description) VALUES(?,?)",["This is title 10","Lorem Ipsum is simply dummy text of the printing and typesetting industry."]);
-    return "Successfully Insert";
- });
- 
- Route::get('shopper/update', function () {
-    DB::update("UPDATE shopper SET fullname=?,phone=?,city=? WHERE id =?", ['kyaw kayw', '222222', 'bago']);
-    return "Data Updated";
-
-});
-
-Route::get('shopper/delete', function () {
-    DB::delete("DELETE FROM shopper WHERE id=?", [1]);
-    return "Data Delete";
-
-});
-
-
-
-Route::get('books/read',function(){
-    // $results = DB::select("SELECT * FROM books");
-    // $results = DB::select("SELECT * FROM books WHERE id = 1");
-    // $results = DB::select("SELECT title FROM books WHERE id = 1");
-
-    // $results = DB::table('books')->get();
-    // $results = DB::table('books')->select('title')->get();
-    // $results = DB::table('books')->selectRaw('*')->get();
-
-
-    // $results = DB::table('books')->select('title')->where('id',1)->get();
-    // $results = DB::table('books')->selectRaw('*')->where('id',1)->get();
-
-    // $results = DB::table('books')->select('title','description')->where('id',1)->get();
-    // $results = DB::table('books')->selectRaw('title , description')->where('id',1)->get();
-
-    // $results = DB::table('books')->select(DB::raw('*'))->where('id',1)->get();
-    // $results = DB::table('books')->selectRaw(DB::raw('*'))->where('id',1)->get();  //not nessary DB:raw('*') because of calling all coumn
-    // $results = DB::table('books')->selectRaw(DB::raw('title,description'))->where('id',1)->get();   // it's okay but  should use DB::raw() only when you need to include raw SQL expressions that cannot be handled directly by Laravel's Query Builder.
-
-    // $results = DB::table('books')->select("count(*) AS titlename,title")->get();   // should use DB::raw() only when you need to include raw SQL expressions that cannot be handled directly by Laravel's Query Builder.
-    // $results = DB::table('books')->selectRaw("count(*) AS titlename,title")->get();   // should use DB::raw() only when you need to include raw SQL expressions that cannot be handled directly by Laravel's Query Builder.
-
-
-    // $results = DB::table('books')->selectRaw('count(*) AS titlename,title')->where('id',"<>",3)->groupBy('title')->get();  //It's okay because selectRaw knows expression 
-    // $results = DB::table('books')->select('count(*) AS titlename,title')->where('id',"<>",3)->groupBy('title')->get(); // select doesn't know expression. It assumes a column 
-
-    // $results = DB::table('books')->select(DB::raw('count(*) AS titlename,title'))->where('id',"<>",3)->groupBy('title')->get(); // select doesn't know expression. It assumes a column. So to know expression, It is used DB:raw()
-
-    // $results = DB::table('books')->first();
-    // $results = DB::table('books')->pluck('title');
-    $results = DB::table('books')->pluck('title','id'); // one parameter's output is by array . Two parameter is by object. => {'value':'key'}
-
-
-
-
-
-
-    return $results;
+  DB::insert('INSERT INTO types(name) VALUES(?)',["book"]);
 });

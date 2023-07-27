@@ -201,7 +201,7 @@ Route::get('books/read',function(){
 
     // $results = DB::table('books')->first();
     // $results = DB::table('books')->pluck('title');
-    $results = DB::table('books')->pluck('title','id'); // one parameter's output is by array . Two parameter is by object. => {'value':'key'}
+    $results = DB::table('books')->pluck('title','id');
 
 
 

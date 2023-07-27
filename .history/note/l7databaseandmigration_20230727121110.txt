@@ -1,0 +1,189 @@
+=>Migration 
+
+.env 
+
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laraveldatabaseone
+DB_USERNAME=root
+DB_PASSWORD=
+
+
+mysql -u root -p 
+database@passowrd 
+
+status 
+
+CREATE DATABASE laraveldatabaseone
+
+SHOW DATABASE; 
+
+database > migration 
+=>new table to update db server 
+   php artisan migrate 
+
+
+=>Create New Table 
+php artisan make:migration create_tablename_table    //generally name 
+php artisan make:migration creat_tablename_table --create= "tablename"  // give that speciall taht name 
+
+=>Migrate Table 
+php artisan migrate 
+
+=>Avaliable Column Types 
+id()
+increments('id') -> primary key auto incremented value 
+bigIncrements('id') -> same as increments but for big int values
+bitInteger('id') -> stores a bit integer with the specified length (up to 8)
+unsignedBigInteger('id') 
+unsignedInteger('id')
+tinyInteger('id')  //3 or 4 lone
+smallInteger('votes') //3 or 4 lone
+
+binary('photo') 
+boolean('confirmed') 
+char('name',50)-> string of fixed size up tp n characters long, if data is 
+string('email')
+text('description')
+tinytext('notes')
+mediumtext('notes')
+longText('contenent')
+time('bookingtime')
+date('created_at')
+year('birathday')
+datetime('updated_at')
+timestamp('deleted_at') ->use in soft deleted 
+decimal('amout',precision(bal na lone),scale( point . bal na lone yuu mar lal))
+float('measure',precision,scale)
+enum('payment',['precision,scale])
+enum('payment',['visa','mpu''cod','kpay','wave']);  
+set(['option1','option2']) multiple choose from given options 
+json('multipone')
+jsonb('options')-> store json format
+
+
+=>List all file from database > migrations files 
+php artisan migrate:status 
+
+=>Undo Migrate 
+php artisan migrate:rollback 
+php artisan migrate:rollback --step = 2 
+php artisan migrate:rollback --pretend 
+php artisan migrate:regresh [rollback->migrations] =>** DELETE DATA
+
+
+=>Delete all datas (auto rollback and auto migrate)
+php artisan migrate:refresh 
+
+=>Delete all datas (auto rollback and automigrate/selected table count)
+php artisan migrate:refresh --step=3
+
+
+=>Add New Columns 
+php artisan make:migration add_city_to_works_table --table=workers
+
+=>Sort Column 
+php artisan migrate:rollback --pretend 
+php artisan migrate:rollback 
+$table->string('city)->after('phonenumber'); to add_city_to_workers_table
+
+
+php artisan make:migration add_city_to_employees_table --table --table=employees 
+$table->string('city')->after('phonenumber');
+=>down 
+$table->dropColumn('city');
+
+
+
+
+php artisan migrate 
+php artisan migrate:status 
+php artisan migrate:rollback rollback --pretend 
+php artisan migrate:rollback 
+php artisan migrate
+
+
+=>Drop Columns 
+php artisan make:migration remove_id_to_students_table --table=students 
+$table->dropColumn('id');
+php artisan migrate 
+php artisan migrate:status 
+php artisan migrate:rollback --pretend 
+php artisan migrate:rollback 
+php artisan migrate 
+
+
+
+
+php artisan make:migration remove_id_to-worker_table --table=worker 
+=>up 
+$table->dropColumn(['id','phonenumber']);
+=>down
+$table->id();
+$table->string('phonenumber')->after('fullname');
+php artisan migrate 
+php artisan migrate:status 
+php artisan migrate:rollback --pretend 
+php artisan migrate:rollback 
+php artisan migrate 
+
+
+php artisan make:migration remove_addcolumn_to-shopper_table --table=shopper 
+=>up 
+
+Note:: hasColumn(table,columnname)
+
+if(Schema::hasColumn('staffs','id')){
+   Schema::table('staffs',function(Blueprint $table){
+      $table->dropColumn('id');
+   });
+}
+
+
+
+=>down
+$table->id()->first();
+php artisan migrate 
+php artisan migrate:status 
+php artisan migrate:rollback --pretend 
+php artisan migrate:rollback 
+php artisan migrate 
+
+
+=>Rename columns renameColumn(from,to)
+php artisan make:migration rename_students_column --table=students 
+=>up 
+$table->renameColumn('phonenumber','phone');
+$table->renameColumn('city','address');
+
+php artisan migrate 
+php artisan migrate:status 
+php artisan migrate:rollback --pretend 
+php artisan migrate:rollback 
+php artisan migrate 
+
+
+
+
+=>Rename Tablename 
+php artisan make:migration rename_employees_to_customers_table --table=employees 
+
+=>up 
+Schema::rename('employees','customers')
+
+=>down 
+Schema::rename('customers','employees');
+
+php artisan migrate 
+php artisan migrate:status 
+php artisan migrate:rollback --pretend 
+php artisan migrate:rollback 
+php artisan migrate 
+
+
+
+
+=>Default Value 
+php artisan make:migration create_books_table --create="book"
